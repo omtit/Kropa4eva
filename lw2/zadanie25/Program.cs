@@ -15,7 +15,6 @@ namespace zadanie25
             if (koren < 0)
             {
                 Console.WriteLine("Подкоренное выражение отрицательно");
-                return;
             }
             else
             {

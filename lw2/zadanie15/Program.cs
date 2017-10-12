@@ -13,8 +13,7 @@ namespace zadanie15
             double TempInF, TempInC = double.Parse(Console.ReadLine());
             if (TempInC < - 273.15)
             {
-                Console.WriteLine("Температура должна быть выше абсолютного нуля");
-                return;
+                Console.WriteLine("Температура должна быть выше абсолютного нуля");             
             }
             else
             {

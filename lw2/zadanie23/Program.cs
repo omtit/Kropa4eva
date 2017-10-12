@@ -13,9 +13,7 @@ namespace zadanie23
             double disc, a = double.Parse(Console.ReadLine()), b = double.Parse(Console.ReadLine()), c = double.Parse(Console.ReadLine());
             if (a == 0 || b == 0 || c == 0)
             {
-                Console.WriteLine("Данное уравнение не является квадратным");
-                return;
-            }
+                Console.WriteLine("Данное уравнение не является квадратным");            }
             else
             {
                 disc = Math.Pow(b, 2) - 4 * a * c;

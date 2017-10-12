@@ -19,8 +19,7 @@ namespace zadanie28
             }
             if (koren == 0)
             {
-                Console.WriteLine("Знаменатель не может быть равен нулю");
-                return;
+                Console.WriteLine("Знаменатель не может быть равен нулю");              
             }
             else
             {

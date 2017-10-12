@@ -14,7 +14,6 @@ namespace zadanie14
             if (b > 0)
             {
                 Console.WriteLine("Значение B должно быть не положительным");
-                return;
             }
             else
             {

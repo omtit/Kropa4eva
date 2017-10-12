@@ -18,8 +18,7 @@ namespace zadanie21
             }
             if (r2 == 0)
             {
-                Console.WriteLine("Значение r2 должно быть не равно нулю");
-                return;
+                Console.WriteLine("Значение r2 должно быть не равно нулю");           
             }
             else
             {

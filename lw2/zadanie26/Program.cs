@@ -18,8 +18,7 @@ namespace zadanie26
             }
             if (d == 0)
             {
-                Console.WriteLine("Значение d должно быть не равно нулю");
-                return;
+                Console.WriteLine("Значение d должно быть не равно нулю");                
             }
             else
             {

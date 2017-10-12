@@ -10,8 +10,10 @@ namespace zadanie30
     {
         static void Main(string[] args)
         {
-            double res, aInGrad = double.Parse(Console.ReadLine()), bInGrad = double.Parse(Console.ReadLine());
-            res = Math.Sin(Math.PI * aInGrad / 180) * Math.Cos(Math.PI * bInGrad / 180) + Math.Cos(Math.PI * aInGrad / 180) * Math.Sin(Math.PI * bInGrad / 180);
+            double res,aInRad, bInRad, aInGrad = double.Parse(Console.ReadLine()), bInGrad = double.Parse(Console.ReadLine());
+            aInRad = Math.PI * aInGrad / 180;
+            bInRad = Math.PI * bInGrad / 180;
+            res = Math.Sin(aInRad) * Math.Cos(bInRad) + Math.Cos(aInRad) * Math.Sin(bInRad);
             Console.WriteLine("{0:F4}",res);
         }
     }

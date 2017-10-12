@@ -14,14 +14,13 @@ namespace zadanie37
             if (v1 <= 0 || v2 <= 0)
             {
                 Console.WriteLine("Объем должен быть неотрицательным");
-                return;
             }
             else
             {
                 volume = v1 + v2;
                 temp = (t1 * v1 + t2 * v2) / (v1 + v2);
-                Console.WriteLine("Объем - {0:F0}, Температура - {1:F4}",volume,temp);
+                Console.WriteLine("Объем - {0:F0}, Температура - {1:F4}", volume, temp);
+            }
             }
         }
     }
-}

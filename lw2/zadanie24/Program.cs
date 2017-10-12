@@ -20,7 +20,6 @@ namespace zadanie24
             if (dist <=0)
             {
                 Console.WriteLine("Дистанция должна быть неотрицательной");
-                return;
             }
             else
             {

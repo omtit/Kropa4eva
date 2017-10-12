@@ -14,8 +14,7 @@ namespace zadanie13
             koren = 61 - x;
             if (koren < 0)
             {
-                Console.WriteLine("Подкоренное выражение должно быть неотрицательным");
-                return;
+                Console.WriteLine("Подкоренное выражение должно быть неотрицательным");              
             }
             else
             {
