@@ -13,18 +13,15 @@ namespace zadanie14
             double x = double.Parse(Console.ReadLine()), y = double.Parse(Console.ReadLine()), z = double.Parse(Console.ReadLine());
             if (x < 5 && x > -3)
             {
-                Console.Write(x + " ");
-                return;
+                Console.Write(x + " ");             
             }
             if (y < 5 && y > -3)
             {
                 Console.Write(y + " ");
-                return;
             }
             if (z < 5 && z > -3)
             {
-                Console.Write(z);
-                return;
+                Console.Write(z);                
             }
 
 

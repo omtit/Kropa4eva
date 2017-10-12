@@ -17,9 +17,9 @@ namespace zadanie31
                 return;
             }
             double A3, B3;
-            if ((A1 < A2 && B1 < A2))
+            if ((A1 < A2 && B1 < A2) || (A1 > B2 && B1 > B2))
             {
-                Console.WriteLine("ИНтервалы не пересекаются");
+                Console.WriteLine("Интервалы не пересекаются");
             }
             else
             {

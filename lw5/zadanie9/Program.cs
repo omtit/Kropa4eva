@@ -20,6 +20,7 @@ namespace zadanie9
             if (Ss<0 || Ss == 0)
             {
                 Console.WriteLine("Площадь квадрата должна быть положительной");
+                return;
             }
             double radius, edge,d;
             radius = Math.Sqrt(Sc / Math.PI);

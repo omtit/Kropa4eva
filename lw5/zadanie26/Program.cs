@@ -14,7 +14,6 @@ namespace zadanie26
             if ((x >= 2) || (x <= 2 && y >= 0.5 && y <= 1.5))
             {
                 Console.WriteLine("Точка принадлежит области");
-                return;
             }
             else
             {

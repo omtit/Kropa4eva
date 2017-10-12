@@ -11,13 +11,10 @@ namespace zadanie19
         static void Main(string[] args)
         {
             double x = double.Parse(Console.ReadLine()), y = double.Parse(Console.ReadLine());
-            if (x < -2 || x == -2)
+            if (x <= -2 && y >= 1)
             {
-                if (y > 1 || y == 1 )
-                {
-                    Console.WriteLine("Точка принадлежит области");
-                    return;
-                }
+                Console.WriteLine("Точка принадлежит области");
+
             }
             else
             {

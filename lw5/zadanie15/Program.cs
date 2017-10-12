@@ -11,19 +11,19 @@ namespace zadanie15
         static void Main(string[] args)
         {
             double a = double.Parse(Console.ReadLine());
-            if (a < 0 || a == 0)
+            if (a <= 0)
             {
                 Console.WriteLine("Значение a должно быть неотрицательным");
                 return;
             }
             double b = double.Parse(Console.ReadLine());
-            if (b < 0 || b == 0)
+            if (b <= 0)
             {
                 Console.WriteLine("Значение b должно быть неотрицательным");
                 return;
             }
             double c = double.Parse(Console.ReadLine());
-            if (c < 0 || c == 0)
+            if (c <= 0)
             {
                 Console.WriteLine("Значение c должно быть неотрицательным");
                 return;

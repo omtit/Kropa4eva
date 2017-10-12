@@ -11,10 +11,9 @@ namespace zadanie21
         static void Main(string[] args)
         {
             double x = double.Parse(Console.ReadLine()), y = double.Parse(Console.ReadLine());
-            if (x <= 2 && x >= 1 && y < 4)
+            if (x <= 2 && x >= 1 && y <= 4)
             {
                 Console.WriteLine("Точка принадлежит области");
-                return;
             }
             else
             {
