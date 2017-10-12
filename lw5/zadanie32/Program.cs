@@ -41,7 +41,7 @@ namespace zadanie32
             x22 = x2 + w2;
             y12 = y1 + h1;
             y22 = y2 + h2;
-            if ((x1 < x2 && x12 < x22) ||  (x2 > x12 && x22 > x1) || (y2 < y12 && y22 < y12) || (y2 > y1 && y22 > y1))
+            if ((x1 < x2 && x12 < x2) ||  (x1 > x22 && x12 > x22) || (y2 < y12 && y22 < y12) || (y2 > y1 && y22 > y1))
             {
                 Console.WriteLine("Не пересекаются");
             }
