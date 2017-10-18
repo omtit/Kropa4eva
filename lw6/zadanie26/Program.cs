@@ -4,26 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadanie21
+namespace zadanie26
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int x = int.Parse(Console.ReadLine());
-            int n = 10, m = 20;
+            int x = 0, n = 100, m = 1000;
             while (n <= m)
             {
-                if (x == n)
+                if (n % 13 != 0)
                 {
-                    Console.WriteLine(x + "+");                   
+                    Console.Write(n+ " ");
                 }
                 else
                 {
-                    Console.WriteLine(n);                   
+                    Console.Write(n+ "+ ");
+                    x++;
                 }
-                n = n + 1;
+                n++;
             }
+            Console.WriteLine();
+            Console.WriteLine("Ответ:" + x);
         }
     }
 }
