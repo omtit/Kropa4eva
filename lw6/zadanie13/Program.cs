@@ -13,7 +13,7 @@ namespace zadanie13
             int sum = 0,a = int.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
             if (a > b)
             {
-              while (a <= b)
+              while (b <= a)
                 {
                     sum += a;
                     a--;

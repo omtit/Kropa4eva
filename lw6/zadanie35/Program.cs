@@ -26,6 +26,7 @@ namespace zadanie35
             if (h < 0)
             {
                 Console.WriteLine("Значение H должно быть неотрицательно");
+                return;
             }
             if (h == 0)
             {

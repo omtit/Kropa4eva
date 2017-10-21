@@ -11,9 +11,10 @@ namespace zadanie12
         static void Main(string[] args)
         {
             int sum = 0,a = -10, b = int.Parse(Console.ReadLine());
-            if (b >= 10000 || b <= a)
+            if (b > 10000 || b < a)
             {
                 Console.WriteLine("Значение b должно быть в интервале [-10,10000]");
+                return;
             }
             else
             {

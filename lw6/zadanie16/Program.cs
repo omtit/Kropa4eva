@@ -14,6 +14,7 @@ namespace zadanie16
             if (n <= 0)
             {
                 Console.WriteLine("Значение n должно быть положительным");
+                return;
             }
             else
             {

@@ -12,17 +12,17 @@ namespace zadanie19
         {
 
             double b = 83, c = 199, countleft = 0, countright = 0;
-            double a =  0;
-             while (a < b || a > c) 
+            double a = 0;
+            while (a <= b || a >= c) 
             {
                 a = double.Parse(Console.ReadLine());
-                if (a < b || a > c)
+                if (a <= b || a >= c)
                 {
-                    if (a > c)
+                    if (a >= c)
                     {
                         countright++;
                     }
-                    else
+                    if (a <= b)
                     {
                         countleft++;
                     }

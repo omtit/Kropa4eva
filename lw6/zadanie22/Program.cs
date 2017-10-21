@@ -12,17 +12,25 @@ namespace zadanie22
         {
             int n = int.Parse(Console.ReadLine());
             int i = 1;
-            while (i<=n)
+            if (n < 0)
             {
-                if (i % 5 != 0)
+                Console.WriteLine("Значение N должно быть неотрицательным");
+                return;
+            }
+            else
+            {
+                while (i <= n)
                 {
-                    Console.Write("!");
-                    i = i + 1;
-                }
-                else
-                {
-                    Console.Write("! ");
-                    i = i + 1;
+                    if (i % 5 != 0)
+                    {
+                        Console.Write("!");
+                        i = i + 1;
+                    }
+                    else
+                    {
+                        Console.Write("! ");
+                        i = i + 1;
+                    }
                 }
             }
 

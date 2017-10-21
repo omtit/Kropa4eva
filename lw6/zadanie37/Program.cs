@@ -10,7 +10,7 @@ namespace zadanie37
     {
         static void Main(string[] args)
         {
-            string a = "", s = "+", d = "#";
+            string a = "", d = "+", s = "#";
             int i = 1, j = 1;
             int w = int.Parse(Console.ReadLine());
             if (w<0)

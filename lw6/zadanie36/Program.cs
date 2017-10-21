@@ -11,8 +11,7 @@ namespace zadanie36
         static void Main(string[] args)
         {
             int a = int.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
-            String c,s = ".";
-            c = s;
+            String c ="",s = ".";           
             if (a > b)
             {
                 while (b <= a)

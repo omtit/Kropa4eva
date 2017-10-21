@@ -32,11 +32,11 @@ namespace zadanie39
                 while (q < a)
                 {
                     Console.Write(q + "<");
-                    p++;
+                    q++;
                 }
-                while (a <= p)
+                while (a <= (p-1))
                 {
-                    Console.Write(p+">");
+                    Console.Write(q+">");
                     p--;
                     q++;
                 }

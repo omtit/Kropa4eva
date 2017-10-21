@@ -11,7 +11,7 @@ namespace zadanie5
         static void Main(string[] args)
         {
             
-            int n =0 ,a = int.Parse(Console.ReadLine());
+            int n = 0 ,a = int.Parse(Console.ReadLine());
             string b = Console.ReadLine();
             if (a < 0)
             {
@@ -20,7 +20,7 @@ namespace zadanie5
             else
             {
                 Console.Write("\"");
-                while (n <= a)
+                while (n < a)
                 {
                     Console.Write(b);
                     n = n + 1;
