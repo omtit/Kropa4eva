@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie1", "zadanie1\zadanie1.csproj", "{1C8C7199-5D2E-40B0-AA10-62161D615654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie2", "zadanie2\zadanie2.csproj", "{7DED6243-071B-40D8-9DCC-F8C4F2AB7BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie3", "zadanie3\zadanie3.csproj", "{5ED8783E-913F-42D3-89B4-C99F3EA22AE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C8C7199-5D2E-40B0-AA10-62161D615654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8C7199-5D2E-40B0-AA10-62161D615654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8C7199-5D2E-40B0-AA10-62161D615654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8C7199-5D2E-40B0-AA10-62161D615654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DED6243-071B-40D8-9DCC-F8C4F2AB7BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DED6243-071B-40D8-9DCC-F8C4F2AB7BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DED6243-071B-40D8-9DCC-F8C4F2AB7BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DED6243-071B-40D8-9DCC-F8C4F2AB7BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED8783E-913F-42D3-89B4-C99F3EA22AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED8783E-913F-42D3-89B4-C99F3EA22AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED8783E-913F-42D3-89B4-C99F3EA22AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED8783E-913F-42D3-89B4-C99F3EA22AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1376B7C7-1E09-49F0-B26A-EAEC286F0CFD}
+	EndGlobalSection
+EndGlobal
