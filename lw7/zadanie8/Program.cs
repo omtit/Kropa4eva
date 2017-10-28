@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadanie5
+namespace zadanie8
 {
     class Program
     {
@@ -19,21 +19,22 @@ namespace zadanie5
                 return;
             }
             int cb = int.Parse(Console.ReadLine());
-            if (cb > a || cb < 0)
+            if (cb < 0)
             {
-                Console.WriteLine("Значение CB должно быть в интервале [0,длина строки)");
+                Console.WriteLine("Значение CB должно быть неотрицательно");
                 return;
             }
-            if ( cb < ca)
+            if ((cb + ca) > a)
             {
-                Console.WriteLine("Значение CA должно быть меньше CB");
+                Console.WriteLine("Сумма значений CA и CB должна быть меньше длины строки");
+                return;
             }
-            else
+            string str1 = str.Remove(ca, cb);
+            for (int j = 0; j < str1.Length; j++)
             {
-                int r = cb - ca + 1;
-                string part = str.Substring(ca, r);
-                Console.WriteLine(part);
+                Console.Write(str1[j]);
             }
+            Console.WriteLine();
         }
     }
 }
