@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadanie22
+namespace zadanie26
 {
     class Program
     {
@@ -22,23 +22,23 @@ namespace zadanie22
             {
                 a2[i] = int.Parse(a1[i]);
             }
-            int k = 0;
+            int am1 = 0, am2 = 0;
             for (int i = 0; i < a2.Length; i++)
             {
+                int s = a2[i];
                 for (int j = 0; j < a2.Length - 1; j++)
                 {
-                    if (a2[j] > a2[j + 1])
+                    if (s == a2[j + 1])
                     {
-                        k = a2[j + 1];
-                        a2[j + 1] = a2[j];
-                        a2[j] = k;
+                        am1++;
                     }
                 }
+                if (am1 > 0)
+                {
+                    am2++;
+                }
             }
-            for (int i = 0; i < a2.Length; i++)
-            {
-                Console.Write(a2[i] + " ");
-            }
+            Console.WriteLine(am2);
         }
     }
 }
