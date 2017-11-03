@@ -33,8 +33,7 @@ namespace zadanie3
                     }
 
                 }
-                Console.Write(i);
-                Console.WriteLine();
+                Console.WriteLine(i);
             }
         }
     }

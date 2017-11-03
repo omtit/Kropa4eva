@@ -34,8 +34,7 @@ namespace zadanie2
                         String a1 = s1.ReadLine();
                         i++;
                     }
-                    Console.Write(i);
-                    Console.WriteLine();
+                    Console.WriteLine(i);
                 }
             }
         }
