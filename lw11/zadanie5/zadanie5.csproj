@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12BE0DCE-E10F-4540-9C8D-B35D57E170ED}</ProjectGuid>
+    <ProjectGuid>{E86C6161-5F7D-4DDA-9295-8CE2CF66333D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>zadanie1</RootNamespace>
-    <AssemblyName>zadanie1</AssemblyName>
+    <RootNamespace>zadanie5</RootNamespace>
+    <AssemblyName>zadanie5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,34 +49,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="9300\1.txt">
+    <Content Include="6409\1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\10.txt">
+    <Content Include="6409\2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\2.txt">
+    <Content Include="6409\3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\3.txt">
+    <Content Include="6409\4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\4.txt">
+    <Content Include="6409\5.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\5.txt">
+    <Content Include="6409\6.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\6.txt">
+    <Content Include="6409\7.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\7.txt">
+    <Content Include="6409\8.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="9300\8.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="9300\9.txt">
+    <Content Include="6409\9.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

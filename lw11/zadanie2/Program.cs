@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace zadanie1
+namespace zadanie2
 {
     class Program
     {
         static void Main(string[] args)
         {
             String a = Console.ReadLine();
-            String rel1 = "9300\\" + a + ".txt";
+            String rel1 = "3951\\" + a + ".txt";
             int[] s = new int[4];
             int i = 0;
             using (StreamReader str = new StreamReader(rel1))
@@ -27,23 +27,28 @@ namespace zadanie1
                     s[i] = int.Parse(str.ReadLine());
                     i++;
                 }
-            }
-            if ((s[0] - s[2]) < 0 || s[1] + s[2] > 600 || s[0] > 800 || s[0] + s[2] > 800)
+            }           
+            if (s[2] <= 0)
             {
-                Console.WriteLine("Все точки окружности должны находиться в пределах рисунка");
+                Console.WriteLine("Ширина прямоугольника должна быть положительной");
                 return;
             }
-            if (s[2] < s[3])
+            if (s[3] <= 0)
             {
-                Console.WriteLine("Толщина обводки должна быть меньше диаметра круга");
+                Console.WriteLine("Высота прямоугольника должна быть положительной");
+                return;
+            }
+            if (s[0] < 0 || s[0] > 800 || s[0] + s[2] > 800 || s[2] > 800 || s[1] < 0 || s[1] + s[3] > 600 || s[3] > 600)
+            {
+                Console.WriteLine("Все точки прямоугольника должны находиться в пределах рисунка");
                 return;
             }
             String a1 = Console.ReadLine();
             String rel = "pic" + a1 + ".html";
             using (StreamWriter sw = new StreamWriter(rel))
             {
-                sw.WriteLine("<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\"/>\n<head/>\n<body>\n    <h1>Мой первый векторный рисунок</h1>\n\n<svg width=\"800\" height=\"600\">");
-                sw.WriteLine("<circle cx=\"{0}\" cy=\"{1}\" r=\"{2}\" stroke=\"green\"\nstroke-width=\"{3}\" fill=\"yellow\"/>\n    </svg>\n</body>\n</html> ", s[0], s[1], s[2], s[3]);
+                sw.WriteLine("<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\"/>\n<head/>\n<body>\n\n<svg width=\"800\" height=\"600\">");
+                sw.WriteLine("<rect x=\"{0}\" y=\"{1}\" width=\"{2}\" height=\"{3}\"stroke=\"blue\"\nstroke-width=\"2\" fill=\"red\"/>\n    </svg>\n</body>\n</html> ", s[0], s[1], s[2], s[3]);
             }
             System.Diagnostics.Process.Start(rel);
         }

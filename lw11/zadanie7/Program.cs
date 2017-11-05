@@ -15,6 +15,13 @@ namespace zadanie7
             for (int i = 0; i < a.Length; i++)
             {                
                 a[i] = rnd.Next(0, 30);
+                for (int j = 0; j < i; j++)
+                {
+                    if (a[j] == a[i])
+                    {
+                        a[i] = rnd.Next(0, 30);
+                    }
+                }
             }
             Console.WriteLine(String.Join(",", a));
         }
