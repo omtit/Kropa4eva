@@ -14,22 +14,23 @@ namespace Methods
 
         public static void Task4764(String a)
         {
-
+            Console.WriteLine(a+ " нас не остановят!");
         }
 
         public static void Task2429(String a)
         {
-
+            Console.WriteLine("Программирование " + a+"!");
         }
 
         public static void Task7472(String a, String b)
         {
-
+            Console.WriteLine(b + " " + a);
         }
 
         public static void Task3862()
         {
-
+            Console.WriteLine("{0:F4}",Math.PI);
+            Console.WriteLine("{0:F4}", Math.E);
         }
 
         public static void Task9231(double a)

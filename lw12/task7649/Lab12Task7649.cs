@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Methods;
+using Methods;
 
 namespace tfa
 {
@@ -11,11 +11,11 @@ namespace tfa
     {
         static void Main(string[] args)
         {
-            //Step2475();
+            Step2475();
             //Step5951();
             //Step8696();
-            //Step8495();
-            //Step1315();
+            Step8495();
+            Step1315();
 
             //Step3762();
             //Step2324();
@@ -34,34 +34,34 @@ namespace tfa
             //Step7369();
         }
 
-        //static void Step8495()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("8495");
-        //    StringBuilder sb8495 = new StringBuilder();
-        //    sb8495 = sb8495.Append("@");
-        //    sb8495 = Lab06.Task8495(sb8495);
-        //    sb8495 = sb8495.Append("#");
-        //    Console.WriteLine(sb8495.ToString());
-        //}
+        static void Step8495()
+        {
+            Console.WriteLine();
+            Console.WriteLine("8495");
+            StringBuilder sb8495 = new StringBuilder();
+            sb8495 = sb8495.Append("@");
+            sb8495 = Lab06.Task8495(sb8495);
+            sb8495 = sb8495.Append("#");
+            Console.WriteLine(sb8495.ToString());
+        }
 
-        //static void Step1315()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("1315");
-        //    StringBuilder sb1315 = new StringBuilder();
-        //    sb1315.Append("@");
-        //    Lab06.Task1315(sb1315);
-        //    sb1315.Append("#");
-        //    Console.WriteLine(sb1315);
-        //}
+        static void Step1315()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1315");
+            StringBuilder sb1315 = new StringBuilder();
+            sb1315.Append("@");
+            Lab06.Task1315(sb1315);
+            sb1315.Append("#");
+            Console.WriteLine(sb1315);
+        }
 
-        //static void Step2475()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("2475");
-        //    Console.WriteLine(Lab06.Task2475());
-        //}
+        static void Step2475()
+        {
+            Console.WriteLine();
+            Console.WriteLine("2475");
+            Console.WriteLine(Lab06.Task2475());
+        }
 
         //static void Step5951()
         //{

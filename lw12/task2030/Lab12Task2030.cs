@@ -13,11 +13,11 @@ namespace tfa
         {
             Step8878();
             Step8715();
-            //Step4847();
+            Step4847();
             Step1999();
             Step4042();
 
-            //Step6351();
+            Step6351();
             //Step5382();
             //Step7088();
             //Step7250();
@@ -89,25 +89,25 @@ namespace tfa
             }
         }
 
-        //static void Step4847()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("4847");
-        //    int[] in4847x = { 31, 19, 7, 67, 1 };
-        //    int[] in4847y = { 59, 19, 11, -67, 1 };
-        //    int[] in4847z = { 83, 41, 11, 67, 1 };
-        //    for (int i = 0; i < in4847x.Length; i++)
-        //    {
-        //        if (Lab05.Task4847(in4847x[i], in4847y[i], in4847z[i]))
-        //        {
-        //            Console.WriteLine("Среди чисел есть равные");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Числа не равны друг другу");
-        //        }
-        //    }
-        //}
+        static void Step4847()
+        {
+            Console.WriteLine();
+            Console.WriteLine("4847");
+            int[] in4847x = { 31, 19, 7, 67, 1 };
+            int[] in4847y = { 59, 19, 11, -67, 1 };
+            int[] in4847z = { 83, 41, 11, 67, 1 };
+            for (int i = 0; i < in4847x.Length; i++)
+            {
+                if (Lab05.Task4847(in4847x[i], in4847y[i], in4847z[i]))
+                {
+                    Console.WriteLine("Среди чисел есть равные");
+                }
+                else
+                {
+                    Console.WriteLine("Числа не равны друг другу");
+                }
+            }
+        }
 
         static void Step1999()
         {
@@ -128,50 +128,42 @@ namespace tfa
                 }
             }
         }
-
+        static void oformlenie(double x, double y, bool a)
+        {
+            String positivePattern = "{{{0};{1}}} принадлежит области";
+            String negativePattern = "{{{0};{1}}} не принадлежит области";
+            if (a)
+            {
+                Console.WriteLine(positivePattern, x, y);
+            }
+            else
+            {
+                Console.WriteLine(negativePattern, x, y);
+            }
+        }
         static void Step4042()
         {
             Console.WriteLine();
             Console.WriteLine("4042");
-            double[] in4042x = { 2, 1, 0, -1, -2 };
-            double[] in4042y = { 2, 1.5, 0, -2, -3 };
-            String positivePattern = "{{{0};{1}}} принадлежит области";
-            String negativePattern = "{{{0};{1}}} не принадлежит области";
-            for (int i = 0; i < in4042x.Length; i++)
+            double[] x = { 2, 1, 0, -1, -2 };
+            double[] y = { 2, 1.5, 0, -2, -3 };            
+            for (int i = 0; i < x.Length; i++)
             {
-                if (Lab05.Task4042(in4042x[i], in4042y[i]))
-                {
-                    Console.WriteLine(positivePattern, in4042x[i], in4042y[i]);
-                }
-                else
-                {
-                    Console.WriteLine(negativePattern, in4042x[i], in4042y[i]);
-                }
+                oformlenie(x[i], y[i], Lab05.Task4042(x[i], y[i]));                
             }
         }
 
-        //static void Step6351()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("6351");
-        //    double[] in6351x = { 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3 };
-        //    double[] in6351y = { 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2 };
-        //    String positivePattern = "{{{0};{1}}} принадлежит области";
-        //    String negativePattern = "{{{0};{1}}} не принадлежит области";
-        //    for (int i = 0; i < in6351x.Length; i++)
-        //    {
-        //        String currentPattern;
-        //        if (Lab05.Task6351(in6351x[i], in6351y[i]))
-        //        {
-        //            currentPattern = positivePattern;
-        //        }
-        //        else
-        //        {
-        //            currentPattern = negativePattern;
-        //        }
-        //        Console.WriteLine(currentPattern, in6351x[i], in6351y[i]);
-        //    }
-        //}
+        static void Step6351()
+        {
+            Console.WriteLine();
+            Console.WriteLine("6351");
+            double[] x = { 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3 };
+            double[] y = { 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2 };            
+            for (int i = 0; i < x.Length; i++)
+            {
+                oformlenie(x[i], y[i], Lab05.Task6351(x[i], y[i]));               
+            }
+        }
 
         //static void Step5382()
         //{

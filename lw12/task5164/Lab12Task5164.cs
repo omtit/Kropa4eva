@@ -12,10 +12,10 @@ namespace tfa
         static void Main(string[] args)
         {
             Step1860();
-            //Step4764();
-            //Step2429();
+            Step4764();
+            Step2429();
             Step7472();
-            //Step3862();
+            Step3862();
 
             //Step9231();
             //Step8624();
@@ -34,21 +34,21 @@ namespace tfa
             Lab01.Task1860("результату");
         }
 
-        //static void Step4764()
-        //{
-        //    Console.WriteLine();
-        //    Lab01.Task4764("трудности");
-        //    Lab01.Task4764("загадки");
-        //    Lab01.Task4764("сложные задачи");
-        //}
+        static void Step4764()
+        {
+            Console.WriteLine();
+            Lab01.Task4764("трудности");
+            Lab01.Task4764("загадки");
+            Lab01.Task4764("сложные задачи");
+        }
 
-        //static void Step2429()
-        //{
-        //    Console.WriteLine();
-        //    Lab01.Task2429("просто");
-        //    Lab01.Task2429("интересно");
-        //    Lab01.Task2429("перспективно");
-        //}
+        static void Step2429()
+        {
+            Console.WriteLine();
+            Lab01.Task2429("просто");
+            Lab01.Task2429("интересно");
+            Lab01.Task2429("перспективно");
+        }
 
         static void Step7472()
         {
@@ -59,11 +59,11 @@ namespace tfa
             Lab01.Task7472("шаг", "шаг");
         }
 
-        //static void Step3862()
-        //{
-        //    Console.WriteLine();
-        //    Lab01.Task3862();
-        //}
+        static void Step3862()
+        {
+            Console.WriteLine();
+            Lab01.Task3862();
+        }
 
         //static void Step9231()
         //{

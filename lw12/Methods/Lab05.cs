@@ -24,12 +24,20 @@ namespace Methods
         
         public static bool Task1999(int x, int y)
         {
-            return true;
+            return y>=1&&x<=-2;
         }
 
         public static bool Task4042(double x, double y)
         {
-            return false;
+            return y>=-2&&y<=1.5;
+        }
+        public static bool Task4847(int x, int y, int z)
+        {
+            return x==y || x==z || y==z;
+        }
+        public static bool Task6351(double x, double y)
+        {
+            return y <= 4 && x >= 1 && x <= 2;
         }
     }
 }

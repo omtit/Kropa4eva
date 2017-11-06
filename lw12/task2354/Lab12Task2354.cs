@@ -13,9 +13,9 @@ namespace tfa
         {
             Step4411();
             Step8428();
-            //Step1262();
-            //Step2790();
-            //Step9164();
+            Step1262();
+            Step2790();
+            Step9164();
 
             //Step5789();
             //Step5980();
@@ -30,10 +30,10 @@ namespace tfa
             //Step3669();
 
             //Step5969();
-            Step4265();
-            Step3946();
-            Step4283();
-            Step9182();
+            //Step4265();
+            //Step3946();
+            //Step4283();
+            //Step9182();
 
             Step5063();
             //Step7711();
@@ -77,33 +77,33 @@ namespace tfa
             Console.WriteLine("{0:F6}", r - 34.9066);
         }
 
-        //static void Step1262()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("1262");
-        //    Console.WriteLine("{0:F6}", Lab02.Task1262(7583) - 4.6025);
-        //    Console.WriteLine("{0:F6}", Lab02.Task1262(200) - -4.6985);
-        //    Console.WriteLine("{0:F6}", Lab02.Task1262(360) - 5);
-        //    Console.WriteLine("{0:F6}", Lab02.Task1262(90) - 0);
-        //}
+        static void Step1262()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1262");
+            Console.WriteLine("{0:F6}", Lab02.Task1262(7583) - 4.6025);
+            Console.WriteLine("{0:F6}", Lab02.Task1262(200) - -4.6985);
+            Console.WriteLine("{0:F6}", Lab02.Task1262(360) - 5);
+            Console.WriteLine("{0:F6}", Lab02.Task1262(90) - 0);
+        }
 
-        //static void Step2790()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("2790");
-        //    Console.WriteLine("{0:F6}", Lab02.Task2790(6997) - 0.9205);
-        //    Console.WriteLine("{0:F6}", Lab02.Task2790(31) - 0.8572);
-        //    Console.WriteLine("{0:F6}", Lab02.Task2790(0) - 1.0000);
-        //}
+        static void Step2790()
+        {
+            Console.WriteLine();
+            Console.WriteLine("2790");
+            Console.WriteLine("{0:F6}", Lab02.Task2790(6997) - 0.9205);
+            Console.WriteLine("{0:F6}", Lab02.Task2790(31) - 0.8572);
+            Console.WriteLine("{0:F6}", Lab02.Task2790(0) - 1.0000);
+        }
 
-        //static void Step9164()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("9164");
-        //    Console.WriteLine("{0:F6}", Lab02.Task9164(90, 90) - 0.0);
-        //    Console.WriteLine("{0:F6}", Lab02.Task9164(90, 0) - 1.0);
-        //    Console.WriteLine("{0:F6}", Lab02.Task9164(7559, 7549) - -0.2079);
-        //}
+        static void Step9164()
+        {
+            Console.WriteLine();
+            Console.WriteLine("9164");
+            Console.WriteLine("{0:F6}", Lab02.Task9164(90, 90) - 0.0);
+            Console.WriteLine("{0:F6}", Lab02.Task9164(90, 0) - 1.0);
+            Console.WriteLine("{0:F6}", Lab02.Task9164(7559, 7549) - -0.2079);
+        }
 
         //static void Step5789()
         //{
@@ -242,66 +242,66 @@ namespace tfa
         //    Console.WriteLine(Lab06.Task5969(3000, 24) - 642600);
         //}
 
-        static void Step4265()
-        {
-            Console.WriteLine();
-            Console.WriteLine("4265");
-            Console.WriteLine(Lab07.Task4265("sABCD"));
-            Console.WriteLine(Lab07.Task4265("Uxyz"));
-            Console.WriteLine(Lab07.Task4265("s"));
-            Console.WriteLine(Lab07.Task4265("F123"));
-            Console.WriteLine(Lab07.Task4265("Sopqr"));
-        }
+        //static void Step4265()
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine("4265");
+        //    Console.WriteLine(Lab07.Task4265("sABCD"));
+        //    Console.WriteLine(Lab07.Task4265("Uxyz"));
+        //    Console.WriteLine(Lab07.Task4265("s"));
+        //    Console.WriteLine(Lab07.Task4265("F123"));
+        //    Console.WriteLine(Lab07.Task4265("Sopqr"));
+        //}
 
-        static void Step3946()
-        {
-            Console.WriteLine();
-            Console.WriteLine("3946");
-            String[] in3946 = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 3 4 4 4 4",
-                ""};
-            double[] out3946 = { 2.2, 3, 0 };
-            for (int i = 0; i < in3946.Length; i++)
-            {
-                double result = Lab08.Task3946(in3946[i]);
-                Console.WriteLine("{0:F6} ({0:F6})", result, out3946[i]);
-            }
-        }
+        //static void Step3946()
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine("3946");
+        //    String[] in3946 = {
+        //        "1 2 3 4 1",
+        //        "1 2 3 4 1 3 4 4 4 4",
+        //        ""};
+        //    double[] out3946 = { 2.2, 3, 0 };
+        //    for (int i = 0; i < in3946.Length; i++)
+        //    {
+        //        double result = Lab08.Task3946(in3946[i]);
+        //        Console.WriteLine("{0:F6} ({0:F6})", result, out3946[i]);
+        //    }
+        //}
 
-        static void Step4283()
-        {
-            Console.WriteLine();
-            Console.WriteLine("4283");
-            int[] in4283k = { 3, 5, 2, 1 };
-            String[] in4283s = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3",
-                "3 2 2 2 2 2",
-                "4 4 4 4 4 4"};
-            int[] out4283 = { 1, 0, 5, 0 };
-            for (int i = 0; i < in4283k.Length; i++)
-            {
-                int result = Lab08.Task4283(in4283k[i], in4283s[i]);
-                Console.WriteLine("{0} ({1})", result, out4283[i]);
-            }
-        }
+        //static void Step4283()
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine("4283");
+        //    int[] in4283k = { 3, 5, 2, 1 };
+        //    String[] in4283s = {
+        //        "1 2 3 4 1 2",
+        //        "1 2 3 4 1 2 3 4 1 2 3",
+        //        "3 2 2 2 2 2",
+        //        "4 4 4 4 4 4"};
+        //    int[] out4283 = { 1, 0, 5, 0 };
+        //    for (int i = 0; i < in4283k.Length; i++)
+        //    {
+        //        int result = Lab08.Task4283(in4283k[i], in4283s[i]);
+        //        Console.WriteLine("{0} ({1})", result, out4283[i]);
+        //    }
+        //}
 
-        static void Step9182()
-        {
-            Console.WriteLine();
-            Console.WriteLine("9182");
-            String[] in9182 = {
-                "1 2 3 4 5 6",
-                "1 2 3 1 2 6",
-                "1 1 1 1 1 1"};
-            int[] out9182 = { 6, 4, 1 };
-            for (int i = 0; i < out9182.Length; i++)
-            {
-                int result = Lab08.Task9182(in9182[i]);
-                Console.WriteLine("{0} ({1})", result, out9182[i]);
-            }
-        }
+        //static void Step9182()
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine("9182");
+        //    String[] in9182 = {
+        //        "1 2 3 4 5 6",
+        //        "1 2 3 1 2 6",
+        //        "1 1 1 1 1 1"};
+        //    int[] out9182 = { 6, 4, 1 };
+        //    for (int i = 0; i < out9182.Length; i++)
+        //    {
+        //        int result = Lab08.Task9182(in9182[i]);
+        //        Console.WriteLine("{0} ({1})", result, out9182[i]);
+        //    }
+        //}
 
         static void Step5063()
         {
