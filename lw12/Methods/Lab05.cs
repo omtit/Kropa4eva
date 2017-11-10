@@ -7,6 +7,24 @@ namespace Methods
 {
     public class Lab05
     {
+        public static StringBuilder Task8518(StringBuilder sb8518,String x)
+        {
+            String[] a = { "a", "b", "c", "d", "e", "f", "g", "h" };            
+            int i = 0;
+            while (i < a.Length)
+            {
+                if (a[i] == x)
+                {
+                    sb8518.Append(a[i] + "+\n");
+                }
+                else
+                {
+                    sb8518.Append(a[i]+"\n");
+                }
+                i++;
+            }
+            return sb8518;
+        }
         public static bool Task8878(int a, int b)
         {
             return a < b;
