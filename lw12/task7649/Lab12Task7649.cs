@@ -18,7 +18,7 @@ namespace tfa
             Step1315();
 
             //Step3762();
-            //Step2324();
+            Step2324();
             //Step3550();
             //Step6572();
             //Step2084();
@@ -85,26 +85,26 @@ namespace tfa
         //    Console.WriteLine(result3762);
         //}
 
-        //static void Step2324()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("2324");
-        //    String[] in2324 = {
-        //        "1 2 3 4 5 0",
-        //        "0",
-        //        "-1 -2 0",
-        //        "1 1 1 1 1 1 1 1 1 1 1 1 0"};
-        //    String[] out2324 = {
-        //        "Сумма чисел: 15, Количество чисел: 6",
-        //        "Сумма чисел: 0, Количество чисел: 1",
-        //        "Сумма чисел: -3, Количество чисел: 3",
-        //        "Сумма чисел: 12, Количество чисел: 13"};
-        //    for (int i = 0; i < in2324.Length; i++)
-        //    {
-        //        String result = Lab06.Task2324(in2324[i]);
-        //        Console.WriteLine("#{0}\n>{1}", result, out2324[i]);
-        //    }
-        //}
+        static void Step2324()
+        {
+            Console.WriteLine();
+            Console.WriteLine("2324");
+            String[] in2324 = {
+                "1 2 3 4 5 0",
+                "0",
+                "-1 -2 0",
+                "1 1 1 1 1 1 1 1 1 1 1 1 0"};
+            String[] out2324 = {
+                "Сумма чисел: 15, Количество чисел: 6",
+                "Сумма чисел: 0, Количество чисел: 1",
+                "Сумма чисел: -3, Количество чисел: 3",
+                "Сумма чисел: 12, Количество чисел: 13"};
+            for (int i = 0; i < in2324.Length; i++)
+            {
+                String result = Lab06.Task2324(in2324[i]);
+                Console.WriteLine("#{0}\n>{1}", result, out2324[i]);
+            }
+        }
 
         //static void Step3550()
         //{

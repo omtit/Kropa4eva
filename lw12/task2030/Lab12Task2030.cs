@@ -18,14 +18,14 @@ namespace tfa
             Step4042();
 
             Step6351();
-            //Step5382();
-            //Step7088();
-            //Step7250();
-            //Step6740();
+            Step5382();
+            Step7088();
+            Step7250();
+            Step6740();
 
-            //Step9038();
-            //Step7491();
-            //Step4515();
+            Step9038();
+            Step7491();
+            Step4515();
         }
 
         static void Step8878()
@@ -128,7 +128,7 @@ namespace tfa
                 }
             }
         }
-        static void oformlenie(double x, double y, bool a)
+        static void Oformlenie(double x, double y, bool a)
         {
             String positivePattern = "{{{0};{1}}} принадлежит области";
             String negativePattern = "{{{0};{1}}} не принадлежит области";
@@ -146,10 +146,10 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("4042");
             double[] x = { 2, 1, 0, -1, -2 };
-            double[] y = { 2, 1.5, 0, -2, -3 };            
+            double[] y = { 2, 1.5, 0, -2, -3 };
             for (int i = 0; i < x.Length; i++)
             {
-                oformlenie(x[i], y[i], Lab05.Task4042(x[i], y[i]));                
+                Oformlenie(x[i], y[i], Lab05.Task4042(x[i], y[i]));
             }
         }
 
@@ -157,159 +157,117 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("6351");
-            double[] x = { 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3 };
-            double[] y = { 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2 };            
-            for (int i = 0; i < x.Length; i++)
+            double[] x6351 = { 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3 };
+            double[] y6351 = { 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2 };
+            for (int i = 0; i < x6351.Length; i++)
             {
-                oformlenie(x[i], y[i], Lab05.Task6351(x[i], y[i]));               
+                Oformlenie(x6351[i], y6351[i], Lab05.Task6351(x6351[i], y6351[i]));
             }
         }
 
-        //static void Step5382()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("5382");
-        //    double[] in5382x = { 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0 };
-        //    double[] in5382y = { 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1 };
-        //    String positivePattern = "{{{0};{1}}} принадлежит области";
-        //    String negativePattern = "{{{0};{1}}} не принадлежит области";
-        //    for (int i = 0; i < in5382x.Length; i++)
-        //    {
-        //        String currentPattern = Lab05.Task5382(in5382x[i], in5382y[i]) ? positivePattern : negativePattern;
-        //        Console.WriteLine(currentPattern, in5382x[i], in5382y[i]);
-        //    }
-        //}
+        static void Step5382()
+        {
+            Console.WriteLine();
+            Console.WriteLine("5382");
+            double[] in5382x = { 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0 };
+            double[] in5382y = { 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1 };
+            for (int i = 0; i < in5382x.Length; i++)
+            {
+                Oformlenie(in5382x[i], in5382y[i], Lab05.Task6351(in5382x[i], in5382y[i]));
+            }
+        }
+        static void Step7088()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7088");
+            double[] in7088x = {0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1,
+                1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5};
+            double[] in7088y = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, -0.5, -0.5,
+                -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
+            for (int i = 0; i < in7088x.Length; i++)
+            {
+                Oformlenie(in7088x[i], in7088y[i], Lab05.Task7088(in7088x[i], in7088y[i]));
+            }
+        }
+        static void Step7250()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7250");
+            double[] in7250x = { 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };
+            double[] in7250y = { 2, 2, 2, 1, 1, 1, 0, 0, 0, -1.5, -1.5, -1.5, -2, -2, -2 };
+            for (int i = 0; i < in7250x.Length; i++)
+            {
+                Oformlenie(in7250x[i], in7250y[i], Lab05.Task7250(in7250x[i], in7250y[i]));
+            }
+        }
 
-        //static String getPattern(bool condition)
-        //{
-        //    String positivePattern = "{{{0};{1}}} принадлежит области";
-        //    String negativePattern = "{{{0};{1}}} не принадлежит области";
-        //    if (condition)
-        //    {
-        //        return positivePattern;
-        //    }
-        //    else
-        //    {
-        //        return negativePattern;
-        //    }
-        //}
+        static void Step6740()
+        {
+            Console.WriteLine();
+            Console.WriteLine("6740");
+            double[] in6740x = { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
+            double[] in6740y = { 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1.5, -1.5, -1.5, -1.5, -1.5, -2, -2, -2, -2, -2, -3, -3, -3, -3, -3 };
+            for (int i = 0; i < in6740x.Length; i++)
+            {
+                Oformlenie(in6740x[i], in6740y[i], Lab05.Task6740(in6740x[i], in6740y[i]));
+            }
 
-        //static void Step7088()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("7088");
-        //    double[] in7088x = {0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1,
-        //        1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5};
-        //    double[] in7088y = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, -0.5, -0.5,
-        //        -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
-        //    for (int i = 0; i < in7088x.Length; i++)
-        //    {
-        //        String currentPattern = getPattern(Lab05.Task7088(in7088x[i], in7088y[i]));
-        //        Console.WriteLine(currentPattern, in7088x[i], in7088y[i]);
-        //    }
-        //}
+        }
 
-        //static void Step7250()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("7250");
-        //    double[] in7250x = { 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };
-        //    double[] in7250y = { 2, 2, 2, 1, 1, 1, 0, 0, 0, -1.5, -1.5, -1.5, -2, -2, -2 };
-        //    for (int i = 0; i < in7250x.Length; i++)
-        //    {
-        //        Console.Write("{" + in7250x[i] + ";" + in7250y[i]);
-        //        if (Lab05.Task7250(in7250x[i], in7250y[i]))
-        //        {
-        //            Console.WriteLine("} принадлежит области");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("} не принадлежит области");
-        //        }
-        //    }
-        //}
+        static void Step9038()
+        {
+            Console.WriteLine();
+            Console.WriteLine("9038");
+            double[] in9038x = { 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };
+            double[] in9038y = { 2, 2, 2, 1.5, 1.5, 1.5, 1, 1, 1, 0.5, 0.5, 0.5, 0, 0, 0 };
+            for (int i = 0; i < in9038x.Length; i++)
+            {
+                Oformlenie(in9038x[i], in9038y[i], Lab05.Task9038(in9038x[i], in9038y[i]));
+            }
+        }
 
-        //static void Step6740()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("6740");
-        //    double[] in6740x = { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
-        //    double[] in6740y = { 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1.5, -1.5, -1.5, -1.5, -1.5, -2, -2, -2, -2, -2, -3, -3, -3, -3, -3 };
-        //    for (int i = 0; i < in6740x.Length; i++)
-        //    {
-        //        Console.Write("{" + in6740x[i] + ";" + in6740y[i]);
-        //        if (Lab05.Task6740(in6740x[i], in6740y[i]))
-        //        {
-        //            Console.WriteLine("} принадлежит области");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("} не принадлежит области");
-        //        }
-        //    }
+        static void Step7491()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7491");
+            String[] in7491 = { "bx", "fw", "123" };
+            for (int i = 0; i < in7491.Length; i++)
+            {
+                if (Lab07.Task7491(in7491[i]))
+                {
+                    Console.WriteLine("Содержится");
+                }
+                else
+                {
+                    Console.WriteLine("Не содержится");
+                }
+            }
+        }
 
-        //}
-
-        //static void Step9038()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("9038");
-        //    double[] in9038x = { 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3 };
-        //    double[] in9038y = { 2, 2, 2, 1.5, 1.5, 1.5, 1, 1, 1, 0.5, 0.5, 0.5, 0, 0, 0 };
-        //    for (int i = 0; i < in9038x.Length; i++)
-        //    {
-        //        Console.Write("{" + in9038x[i] + ";" + in9038y[i]);
-        //        if (Lab05.Task9038(in9038x[i], in9038y[i]))
-        //        {
-        //            Console.WriteLine("} принадлежит области");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("} не принадлежит области");
-        //        }
-        //    }
-        //}
-
-        //static void Step7491()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("7491");
-        //    String[] in7491 = { "bx", "fw", "123" };
-        //    for (int i = 0; i < in7491.Length; i++)
-        //    {
-        //        if (Lab07.Task7491(in7491[i]))
-        //        {
-        //            Console.WriteLine("Содержится");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Не содержится");
-        //        }
-        //    }
-        //}
-
-        //static void Step4515()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("4515");
-        //    String[] in4515 = {
-        //        "q w e r",
-        //        "q w q r",
-        //        "q w e q",
-        //        "q w e w",
-        //        "r r r r",
-        //        "a b c d q w e r"};
-        //    for (int i = 0; i < in4515.Length; i++)
-        //    {
-        //        if (Lab08.Task4515(in4515[i]))
-        //        {
-        //            Console.WriteLine("Повторения есть");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Повторений нет");
-        //        }
-        //    }
-        //}
+        static void Step4515()
+        {
+            Console.WriteLine();
+            Console.WriteLine("4515");
+            String[] in4515 = {
+                "q w e r",
+                "q w q r",
+                "q w e q",
+                "q w e w",
+                "r r r r",
+                "a b c d q w e r"};
+            for (int i = 0; i < in4515.Length; i++)
+            {
+                if (Lab08.Task4515(in4515[i]))
+                {
+                    Console.WriteLine("Повторения есть");
+                }
+                else
+                {
+                    Console.WriteLine("Повторений нет");
+                }
+            }
+        }
     }
 }
+ 
+
