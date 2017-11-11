@@ -2,11 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Methods
 {
     public class Lab02
     {
+        
+        //public static String Task6882(int a)
+        //{
+        //    String rel = "task6882\\test" + a + ".txt";
+        //    if (!File.Exists(rel))
+        //    {
+        //        throw new Exception("Файл"+ Path.GetFullPath(rel)+ "не найден");
+        //    }
+        //    return "task6882\\test" + a + ".txt";
+        //}
+        public static double Task3943(double x, double y)
+        {
+            if (y<0)
+            {
+                throw new Exception("Значение y должно быть неотрицательным");
+            }
+            if (x + Math.Sqrt(y)<0)
+            {
+                throw new Exception("Подкоренное выражение должно быть неотрицательным");
+            }
+            return -5 * Math.Sqrt(x + Math.Sqrt(y));
+        }
+        public static double Task7237(double x)
+        {
+            double y = -273.15;
+            if (x < y)
+            {
+                throw new Exception("Температура должна быть выше абсолютного нуля");
+            }
+            return x * 1.8 + 32;
+        }
         public static double Task4411(double x)
         {
             return x + 7;

@@ -12,8 +12,8 @@ namespace task9701
         static void Main(string[] args)
         {
             Step9020();
-            //Step7237();
-            //Step3943();
+            Step7237();
+            Step3943();
             //Step8873();
             //Step2624();
 
@@ -76,46 +76,46 @@ namespace task9701
             }
         }
 
-        //static void Step7237()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("7237");
-        //    double[] in7237 = { 0, 20.5, 691.9, -273.15, -300 };
-        //    double[] outs7237 = { 32, 68.9, 1277.4200, -459.67, 0 };
-        //    for (int i = 0; i < in7237.Length; i++)
-        //    {
-        //        try
-        //        {
-        //            double result = Lab02.Task7237(in7237[i]);
-        //            Console.WriteLine("{0:F6} ({1:F6})", result, outs7237[i]);
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e.Message);
-        //        }
-        //    }
-        //}
+        static void Step7237()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7237");
+            double[] in7237 = { 0, 20.5, 691.9, -273.15, -300 };
+            double[] outs7237 = { 32, 68.9, 1277.4200, -459.67, 0 };
+            for (int i = 0; i < in7237.Length; i++)
+            {
+                try
+                {
+                    double result = Lab02.Task7237(in7237[i]);
+                    Console.WriteLine("{0:F6} ({1:F6})", result, outs7237[i]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
 
-        //static void Step3943()
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine("3943");
-        //    int[] in3943x = { -5, 7507, 7489, -7481 };
-        //    int[] in3943y = { 81, 7499, -7487, 7477 };
-        //    double[] outs3943 = { -10, -435.7062, 0, 0 };
-        //    for (int i = 0; i < in3943x.Length; i++)
-        //    {
-        //        try
-        //        {
-        //            double result = Lab02.Task3943(in3943x[i], in3943y[i]);
-        //            Console.WriteLine("{0:F6} ({1:F6})", result, outs3943[i]);
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e.Message);
-        //        }
-        //    }
-        //}
+        static void Step3943()
+        {
+            Console.WriteLine();
+            Console.WriteLine("3943");
+            int[] in3943x = { -5, 7507, 7489, -7481 };
+            int[] in3943y = { 81, 7499, -7487, 7477 };
+            double[] outs3943 = { -10, -435.7062, 0, 0 };
+            for (int i = 0; i < in3943x.Length; i++)
+            {
+                try
+                {
+                    double result = Lab02.Task3943(in3943x[i], in3943y[i]);
+                    Console.WriteLine("{0:F6} ({1:F6})", result, outs3943[i]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
 
         //static void Step8873()
         //{
