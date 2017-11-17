@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E2B4D9E-4D03-4832-B262-6C00FA4136DD}</ProjectGuid>
+    <ProjectGuid>{06D4EA91-DBE0-4ECA-9E35-625813C347B6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>task6882</RootNamespace>
-    <AssemblyName>task6882</AssemblyName>
+    <RootNamespace>task9472</RootNamespace>
+    <AssemblyName>task9472</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,40 +42,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lab13Task6882.cs" />
+    <Compile Include="Lab13Task9472.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Methods\Methods.csproj">
-      <Project>{144a76c2-13c2-46ba-a63b-901ef8630b5a}</Project>
-      <Name>Methods</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="task6882\test1.txt">
+    <None Include="task9472\test1.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test2.txt">
+    </None>
+    <None Include="task9472\test2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test3.txt">
+    </None>
+    <None Include="task9472\test4.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test4.txt">
+    </None>
+    <None Include="task9472\test5.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test5.txt">
+    </None>
+    <None Include="task9472\test6.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test6.txt">
+    </None>
+    <None Include="task9472\test7.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="task6882\test8.txt">
+    </None>
+    <None Include="task9472\test8.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

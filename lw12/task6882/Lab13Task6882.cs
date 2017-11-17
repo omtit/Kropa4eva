@@ -8,7 +8,7 @@ using System.IO;
 
 namespace task6882
 {
-    class Lab12Task6882
+    class Lab13Task6882
     {
         static void Main(string[] args)
         {
