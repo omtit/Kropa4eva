@@ -73,7 +73,7 @@ namespace Methods
         {
             if (String.IsNullOrEmpty(s1))
             {
-                Console.WriteLine("Исходная строка пуста");
+                throw new ArgumentException("Исходная строка пуста");
             }
             String[] a1 = s1.Split(' ');
             if (b < 0 || b > a1.Length - 1)

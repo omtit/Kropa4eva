@@ -15,71 +15,55 @@ namespace task9472
             {
                 try
                 {
+                    double s1 = 0, s;
                     String rel = "task9472\\test" + a + ".csv";
                     using (StreamReader str = new StreamReader(rel))
                     {
                         if (!str.EndOfStream)
                         {
-                            String x = str.ReadLine();
-                            String[] x1 = x.Split(';');
-                            if (!x.Contains("rect") && !x.Contains("circle") && (x1.Length != 5 || x1.Length != 4))
+                            while (!str.EndOfStream)
                             {
-                                Console.WriteLine("Сообщение об ошибке");
-                            }
-                            else
-                            {
-                                double s = 0, s1 = 0;
-                                if (x1[0] == "rect" && x1.Length == 5)
+                                String x = str.ReadLine();
+                                String[] x1 = x.Split(';');
+                                if (!x.Contains("rect") && !x.Contains("circle") && (x1.Length != 5 || x1.Length != 4))
                                 {
-                                    s = double.Parse(x1[3]) * double.Parse(x1[4]);
-                                }
-                                if (x1[0] == "circle" && x1.Length == 4)
-                                {
-                                    s = Math.PI * Math.Pow(double.Parse(x1[3]), 2);
+                                    Console.WriteLine("Сообщение об ошибке");
+                                    break;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Некорректный формат данных");
-                                    continue;
-                                }
-                                while (!str.EndOfStream)
-                                {
-                                    String[] x2 = str.ReadLine().Split(';');
                                     if (x1[0] == "rect" && x1.Length == 5)
                                     {
-                                        s1 = double.Parse(x2[3]) * double.Parse(x2[4]);
-                                        if (s1 > s)
+                                        s = double.Parse(x1[3]) * double.Parse(x1[4]);
+                                        if (s > s1)
                                         {
-                                            s = s1;
+                                            s1 = s;
                                         }
                                     }
                                     if (x1[0] == "circle" && x1.Length == 4)
                                     {
-                                        s1 = Math.PI * Math.Pow(double.Parse(x2[3]), 2);
-                                        if (s1 > s)
+                                        s = Math.PI * Math.Pow(double.Parse(x1[3]), 2);
+                                        if (s > s1)
                                         {
-                                            s = s1;
+                                            s1 = s;
                                         }
                                     }
-                                    Console.WriteLine(s1);
-                                    Console.WriteLine(s);
                                 }
+                            }
+                            if (s1 != 0)
+                            {
+                                Console.WriteLine("{0:F4}", s1);
                             }
                         }
                         else
                         {
                             Console.WriteLine("Файл пуст");
                         }
-
                     }
                 }
                 catch (FileNotFoundException e)
                 {
                     Console.WriteLine("Файл не существует");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("что то пошло не так");
                 }
             }
         }
