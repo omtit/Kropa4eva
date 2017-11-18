@@ -40,17 +40,13 @@ namespace task9472
                                             s1 = s;
                                         }
                                     }
-                                   else if (x1[0] == "circle" && x1.Length == 4)
+                                    if (x1[0] == "circle" && x1.Length == 4)
                                     {
                                         s = Math.PI * Math.Pow(double.Parse(x1[3]), 2);
                                         if (s > s1)
                                         {
                                             s1 = s;
                                         }
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Неверный формат");
                                     }
                                 }
                             }

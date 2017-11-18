@@ -7,6 +7,457 @@ namespace Methods
 {
     public class Lab06
     {
+        public static StringBuilder Task1862(StringBuilder sb1862, String s1, String s2, int w, int h)
+        {
+            if (w < 0)
+            {
+                throw new ArgumentException("Значение w должно быть неотрицательно");
+            }
+            if (h < 0)
+            {
+                throw new ArgumentException("Значение h должно быть неотрицательно");
+            }
+            if (h == 0 || w == 0)
+            {
+                sb1862.Append("");
+            }
+            else
+            {
+                int i = 1, j = 1;
+                String a = "";
+                while (i <= h)
+                {
+
+                    while (j <= w)
+                    {
+                        if (j % 2 == 0)
+                        {
+                            a = s2;
+                        }
+                        else
+                        {
+                            a = s1;
+                        }
+                        sb1862.Append(a);
+                        j++;
+                    }
+                    sb1862.Append("\n");
+                    j = 1;
+                    i++;
+
+                }
+            }
+            return sb1862;
+        }
+        public static StringBuilder Task5171(StringBuilder sb5172, String s1, String s2, int w, int h)
+        {
+            if (w < 0)
+            {
+                throw new ArgumentException("Значение w должно быть неотрицательно");
+            }
+            if (h < 0)
+            {
+                throw new ArgumentException("Значение h должно быть неотрицательно");
+            }
+            if (h == 0 || w == 0)
+            {
+                sb5172.Append("");
+            }
+            else
+            {
+                int i = 1, j = 1;
+                String a = "";
+                while (i <= h)
+                {
+                    if (i % 2 == 0)
+                    {
+                        a = s2;
+                    }
+                    else
+                    {
+                        a = s1;
+                    }
+                    while (j <= w)
+                    {
+                        sb5172.Append(a);
+                        j++;
+                    }
+                    sb5172.Append("\n");
+                    j = 1;
+                    i++;
+                }
+            }
+            return sb5172;
+        }
+        public static StringBuilder Task5238(StringBuilder sb5238, int w, int h)
+        {
+            if (w < 0)
+            {
+                throw new ArgumentException("Значение W должно быть неотрицательно");
+            }
+            if (h < 0)
+            {
+                throw new ArgumentException("Значение H должно быть неотрицательно");
+            }
+            if (h == 0 || w == 0)
+            {
+                sb5238.Append("");
+            }
+            else
+            {
+                int i = 1, j = 1, w1 = w;
+                string a = "", d = "+", s = "#";
+                while (j <= h)
+                {
+                    while (i <= w)
+                    {
+                        sb5238.Append(d);
+                        i++;
+                    }
+                    w--;
+                    i = 1;
+                    sb5238.Append(a);
+                    sb5238.Append("\n");
+                    if (a.Length < w1)
+                    {
+                        a = a + s;
+                    }
+                    j++;
+                }
+            }
+            return sb5238;
+
+        }
+        public static StringBuilder Task5448(StringBuilder sb5448, String s, int h)
+        {
+            if (h < 0)
+            {
+                throw new ArgumentException("Значение H должно быть неотрицательно");
+            }
+            if (h == 0)
+            {
+                sb5448.Append("");
+            }
+            else
+            {
+                String a = s;
+                int i = 1;
+                while (i <= h)
+                {
+                    sb5448.Append(s + "\n");
+                    s = s + a;
+                    i++;
+                }
+            }
+            return sb5448;
+        }
+        public static StringBuilder Task7517(StringBuilder sb7517, int w, int h)
+        {
+            if (w < 0)
+            {
+                throw new Exception("Значение W должно быть неотрицательно");
+            }
+            if (h < 0)
+            {
+                throw new Exception("Значение H должно быть неотрицательно");
+            }
+            if (w == 0 || h == 0)
+            {
+                sb7517.Append("");
+            }
+            else
+            {
+                int i = 0, j = 0;
+                sb7517.Append(" ");
+                while (i <= w - 1)
+                {
+                    sb7517.Append(i);
+                    i++;
+                }
+                i = 0;
+                sb7517.Append("\n");
+                while (j <= h - 1)
+                {
+                    sb7517.Append(j);
+                    while (i <= w - 1)
+                    {
+                        sb7517.Append(" ");
+                        i++;
+                    }
+                    sb7517.Append("|\n");
+                    i = 0;
+                    j++;
+                }
+                sb7517.Append(" ");
+                while (i <= w - 1)
+                {
+                    sb7517.Append("-");
+                    i++;
+                }
+            }
+            return sb7517;
+
+        }
+        public static StringBuilder Task4075(StringBuilder sb4075, int w)
+        {
+            if (w < 0)
+            {
+                throw new ArgumentException("Значение W должно быть неотрицательно");
+            }
+            if (w == 0)
+            {
+                sb4075.Append("");
+            }
+            else
+            {
+                int i = 1;
+                sb4075.Append("+");
+                while (i <= w - 2)
+                {
+                    sb4075.Append("-");
+                    i++;
+                }
+                sb4075.Append("+\n");
+                i = 1;
+                sb4075.Append("|");
+                while (i <= w - 2)
+                {
+                    sb4075.Append(".");
+                    i++;
+                }
+                sb4075.Append("|\n");
+                i = 1;
+                sb4075.Append("+");
+                while (i <= w - 2)
+                {
+                    sb4075.Append("-");
+                    i++;
+                }
+                sb4075.Append("+\n");
+            }
+            return sb4075;
+        }
+        public static StringBuilder Task2592(StringBuilder sb2592, String s, int w, int h)
+        {
+            if (w < 0)
+            {
+                throw new ArgumentException("Значение W должно быть неотрицательно");
+            }
+            if (h < 0)
+            {
+                throw new ArgumentException("Значение H должно быть неотрицательно");
+            }
+            if (h == 0 || w == 0)
+            {
+                sb2592.Append("");
+            }
+            else
+            {
+                int i = 1, j = 1;
+                while (j <= h)
+                {
+                    while (i <= w)
+                    {
+                        sb2592.Append(s);
+                        i++;
+                    }
+                    i = 1;
+                    sb2592.Append("\n");
+                    j++;
+                }
+            }
+            return sb2592;
+        }
+        public static StringBuilder Task5568(StringBuilder sb5568, int w)
+        {
+            if (w < 0 || w > 20)
+            {
+                throw new Exception("Значение W должно быть в интервале [0, 20]");
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < w; j++)
+                {
+                    sb5568.Append(i);
+                }
+                sb5568.Append("\n");
+            }
+            return sb5568;
+        }
+        public static StringBuilder Task8395(StringBuilder sb8395, int w)
+        {
+            if (w < 0 || w > 20)
+            {
+                throw new Exception("Значение W должно быть в интервале [0, 20]");
+            }
+            String[] s = { "a", "b", "c", "d", "e", "f", "g", "h" };
+            for (int i = 0; i < s.Length; i++)
+            {
+                for (int j = 0; j < w; j++)
+                {
+                    sb8395.Append(s[i]);
+                }
+                sb8395.Append("\n");
+            }
+            return sb8395;
+        }
+        public static StringBuilder Task4236(StringBuilder sb4236, int y)
+        {
+            if (y < 0 || y > 15)
+            {
+                throw new Exception("Значение Y должно быть в интервале [0, 15]");
+            }
+            for (int x = 0; x < 15; x++)
+            {
+                if (x < y)
+                {
+                    sb4236.Append("#");
+                }
+                else
+                {
+                    sb4236.Append(".");
+                }
+            }
+            return sb4236;
+        }
+        public static StringBuilder Task3983(StringBuilder sb3983, int n)
+        {
+            if (n < 0)
+            {
+                throw new Exception("Значение N должно быть неотрицательным");
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 20 != 0)
+                {
+                    sb3983.Append("#");
+                }
+                else
+                {
+                    sb3983.Append(" ");
+                }
+            }
+            return sb3983;
+        }
+        public static StringBuilder Task1483(StringBuilder sb1483, int n)
+        {
+            if (n < 0)
+            {
+                throw new Exception("Значение N должно быть неотрицательным");
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 5 != 0)
+                {
+                    sb1483.Append("!");
+                }
+                else
+                {
+                    sb1483.Append("! ");
+                }
+            }
+            return sb1483;
+        }
+        public static StringBuilder Task2594(StringBuilder sb2594, int a, String b)
+        {
+            if (a < 0)
+            {
+                throw new ArgumentException("Значение A должно быть неотрицательным");
+            }
+            sb2594.Append("\"");
+            for (int i = 0; i < a; i++)
+            {
+                sb2594.Append(b);
+            }
+            sb2594.Append("\"");
+            return sb2594;
+        }
+        public static StringBuilder Task6066(StringBuilder sb6066, int a, int b)
+        {
+            if (a > b)
+            {
+                throw new Exception("Значение A должно быть не больше значения B");
+            }
+            while (a <= b)
+            {
+                sb6066.Append(a + "\n");
+                a++;
+            }
+
+            return sb6066;
+        }
+        public static StringBuilder Task2565(StringBuilder sb2565, int a, int b)
+        {
+            if (a > b)
+            {
+                throw new Exception("Значение A должно быть не больше значения B");
+            }
+            while (b >= a)
+            {
+                sb2565.Append(b + " ");
+                b--;
+            }
+            return sb2565;
+        }
+        public static bool Task5170(int y)
+        {
+            if (y <= 0)
+            {
+                throw new ArgumentException("Значение Y должно быть положительным");
+            }
+            int a = 0;
+            for (int i = 1; i <= y; i++)
+            {
+                if (y % i == 0)
+                {
+                    a++;
+                }
+            }
+            return a <= 2;
+        }
+        public static int Task1544(int B)
+        {
+            if (B < -10 || B > 10000)
+            {
+                throw new ArgumentException("Значение B должно быть в интервале [-100, 500]");
+            }
+            int sum = 0;
+            while (B >= -10)
+            {
+                sum += B;
+                B--;
+            }
+            return sum;
+        }
+
+        public static int Task9180(int A)
+        {
+            if (A < -100 || A > 500)
+            {
+                throw new ArgumentException("Значение A должно быть в интервале [-100, 500]");
+            }
+            int sum = 0;
+            while (A <= 500)
+            {
+                sum += A;
+                A++;
+            }
+            return sum;
+        }
+        public static double Task2802(double n)
+        {
+            if (n <= 0)
+            {
+                throw new Exception("Значение N должно быть положительным");
+            }
+            double i = 1, res = 0;
+            while (i <= n)
+            {
+                res += 1 / i;
+                i++;
+            }
+            return res;
+        }
         public static StringBuilder Task8770(StringBuilder sb8770, int x)
         {
             for (int n = 30; n <= 40; n++)
