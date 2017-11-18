@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using Methods;
 using System.IO;
 
-
-namespace Lab12Task6882
+namespace task6882
 {
-    class Lab12Task6882
+    class Lab13Task6882
     {
         static void Main(string[] args)
         {
@@ -46,7 +45,7 @@ namespace Lab12Task6882
                         else
                         {
                             Console.WriteLine("Файл пуст");
-                        }                        
+                        }
                     }
                 }
                 catch (FileNotFoundException e)
