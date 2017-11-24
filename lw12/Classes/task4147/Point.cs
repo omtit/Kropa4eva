@@ -19,7 +19,7 @@ namespace Classes.Task4147
 
         public String Print()
         {
-            return "(" + X + ";" + X + ")";
+            return "(" + X + ";" + Y + ")";
         }
     }
 }

@@ -4,19 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task5242
+namespace Classes.task7297
 {
     public class Interval
     {
         public int a;
         public int b;
-        public String Print()
+        public bool Contains(int x)
         {
             if (a > b)
             {
                 throw new InvalidOperationException("Корректность интервала была нарушена");
             }
-            return "[" + a + ";" + b + "]";
+            return x > a && x < b;
         }
+
     }
 }

@@ -44,7 +44,7 @@ namespace Classes.Task4147
                 && y <= p.Y && p.Y <= y + h;
         }
 
-        public double area
+        public double Area
         {
             get
             {

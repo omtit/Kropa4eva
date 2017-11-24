@@ -15,7 +15,7 @@ namespace lab14
             p.x = 0;
             p.y = 0;
             double dist = p.DistanceTo(4, 3);
-            Console.WriteLine(dist);
+            Console.WriteLine("{0:F1}",dist);
         }
 
         public static void Step2()
@@ -23,7 +23,7 @@ namespace lab14
             Point p = new Point();
             p.x = 0;
             p.y = 0;
-            Console.WriteLine(p.DistanceTo(0, 0));
+            Console.WriteLine("{0:F1}", p.DistanceTo(0, 0));
         }
 
         public static void Step3()
@@ -41,7 +41,7 @@ namespace lab14
                 x = 11,
                 y = 23
             };
-            Console.WriteLine(p.DistanceTo(11, 13));
+            Console.WriteLine("{0:F1}", p.DistanceTo(11, 13));
         }
     }
 }

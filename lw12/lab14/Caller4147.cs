@@ -42,7 +42,7 @@ namespace lab14
         {
             Point corner = new Point(10, 10);
             Rectangle r = new Rectangle(corner, 20, 20);
-            Console.WriteLine(r.area);
+            Console.WriteLine(r.Area);
         }
 
         public static void Step4()
@@ -50,7 +50,7 @@ namespace lab14
             Interval projectionX = new Interval(15, 30);
             Interval projectionY = new Interval(20, 35);
             Rectangle r = new Rectangle(projectionX, projectionY);
-            Console.WriteLine(r.area);
+            Console.WriteLine(r.Area);
         }
 
         public static void Step5()

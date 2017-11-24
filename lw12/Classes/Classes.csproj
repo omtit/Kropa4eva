@@ -51,9 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="task1379\Interval.cs" />
     <Compile Include="task1457\Comparator1457.cs" />
     <Compile Include="task1457\Point.cs" />
+    <Compile Include="task1953\Circle.cs" />
+    <Compile Include="task1953\Interval.cs" />
     <Compile Include="task2000\Interval.cs" />
+    <Compile Include="task2401\Interval.cs" />
+    <Compile Include="task2662\Interval.cs" />
     <Compile Include="task2809\Point.cs" />
     <Compile Include="task3185\Point.cs" />
     <Compile Include="task3956\Circle.cs" />
@@ -73,6 +78,7 @@
     <Compile Include="task6876\Rectangle.cs" />
     <Compile Include="task6876\Shape.cs" />
     <Compile Include="task7186\Comparator7186.cs" />
+    <Compile Include="task7297\Interval.cs" />
     <Compile Include="task7301\Point.cs" />
     <Compile Include="task8258\Comparator8258.cs" />
     <Compile Include="task8403\Point.cs" />
@@ -82,14 +88,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="lab17\" />
-    <Folder Include="task1379\" />
-    <Folder Include="task1953\" />
-    <Folder Include="task2401\" />
-    <Folder Include="task2662\" />
-    <Folder Include="task7297\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
