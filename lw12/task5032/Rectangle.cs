@@ -20,11 +20,17 @@ namespace task5032
             this.W = w;
             this.H = h;
         }
-        public int ShiftX(int x)
+        public void ShiftX(int x)
         {
-            return X + x;
+            if (X + x < 0)
+            {
+                //err = "\nОшибка: Координата X должна быть неотрицательной\nПоследнее корректное состояние:";
+                //break;
+            }
+            X += x;
+
         }
-        public int ShiftY(int y)
+            public int ShiftY(int y)
         {
             return Y + y;
         }

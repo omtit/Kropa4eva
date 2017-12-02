@@ -37,17 +37,9 @@ namespace task5032
                             {
                                 String[] s = str.ReadLine().Split(';');
                                 if (s[0] == "shiftX" && s.Length == 2)
-                                {
-                                    if (Rect1.X + int.Parse(s[1]) < 0)
-                                    {
-                                        err = "\nОшибка: Координата X должна быть неотрицательной\nПоследнее корректное состояние:";
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Rect1.X = Rect1.ShiftX(int.Parse(s[1]));
-                                        amount++;
-                                    }
+                                {                                    
+                                   Rect1.ShiftX(int.Parse(s[1]));
+                                        amount++;                                    
                                 }
                                 else if (s[0] == "shiftY" && s.Length == 2)
                                 {
