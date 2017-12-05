@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Classes.Form;
 
 namespace task5032
 {
@@ -12,13 +13,12 @@ namespace task5032
         static void Main(string[] args)
         {
             StringBuilder sb5032 = new StringBuilder();
-            String result = "res.html";
-            
-            sb5032.Append("<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\"/>\n<head/>\n<body>\n");
+            Form F = new Form();
+            F.Top(sb5032);
             for (int i = 1; i < 15; i++)
             {
+                F.Mid1(sb5032, i);
                 int amount = 0;
-                sb5032.Append("<p><b>" + i + "</b><p/>\n");
                 Rectangle Rect1 = new Rectangle(100, 100, 100, 100);
                 String Beginning = Rect1.Print1();
                 String rel = "task5032\\test" + i + ".csv";
@@ -31,71 +31,41 @@ namespace task5032
                             sb5032.Append("<p>Файл пуст<p/>");
                         }
                         else
-                        {    
-                            String err = "\nРезультат :";
+                        {
                             while (!str.EndOfStream)
                             {
                                 String[] s = str.ReadLine().Split(';');
                                 if (s[0] == "shiftX" && s.Length == 2)
-                                {                                    
-                                   Rect1.ShiftX(int.Parse(s[1]));
-                                        amount++;                                    
+                                {
+                                    Rect1.ShiftX(int.Parse(s[1]));
+                                    amount++;
                                 }
                                 else if (s[0] == "shiftY" && s.Length == 2)
                                 {
-                                    if (Rect1.Y + int.Parse(s[1]) < 0)
-                                    {
-                                        err = "\nОшибка: Координата Y должна быть неотрицательной\nПоследнее корректное состояние:";
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Rect1.Y = Rect1.ShiftY(int.Parse(s[1]));
-                                        amount++;
-                                    }
+                                    Rect1.ShiftY(int.Parse(s[1]));
+                                    amount++;
                                 }
                                 else if (s[0] == "stretchX" && s.Length == 2)
                                 {
-                                    if (Rect1.W + int.Parse(s[1]) < 0)
-                                    {
-                                        err = "\nОшибка: Ширина должна быть положительной\nПоследнее корректное состояние:";
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Rect1.W = Rect1.StretchX(int.Parse(s[1]));
-                                        amount++;
-                                    }
+                                    Rect1.StretchX(int.Parse(s[1]));
+                                    amount++;
                                 }
                                 else if (s[0] == "stretchY" && s.Length == 2)
                                 {
-                                    if (Rect1.H + int.Parse(s[1]) < 0)
-                                    {
-                                        err = "\nОшибка: Высота должна быть положительной\nПоследнее корректное состояние:";
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Rect1.H = Rect1.StretchY(int.Parse(s[1]));
-                                        amount++;
-                                    }
+                                    Rect1.StretchY(int.Parse(s[1]));
+                                    amount++;
                                 }
                                 else
                                 {
-                                    err = "\nОшибка: Некорректный формат\nПоследнее корректное состояние:";
-                                    break;
+                                    throw new ArgumentException("<p>\nОшибка: Некорретный формат данных\nПоследнее корректное состояние: <p/>");
                                 }
                             }
-                            sb5032.Append("<p>Действий: " + amount + err + "<p/>");
-                            sb5032.Append("<svg width=\"400\" height=\"400\">");
-                            if (amount > 0)
-                            {
-                                sb5032.Append(Rect1.Print2());
-                            }
-                            sb5032.Append(Beginning);
-                            sb5032.Append("\n</svg>\n</body>\n</html> ");
                         }
                     }
+                }
+                catch (ArgumentException ex)
+                {
+                    sb5032.Append(ex.Message);
                 }
                 catch (FileNotFoundException ex)
                 {
@@ -103,14 +73,20 @@ namespace task5032
                 }
                 catch (FormatException ex)
                 {
-                    sb5032.Append("Не удается считать число");
+                    sb5032.Append("<p>Не удается считать число<p/>");
+                }
+                if (amount > 0)
+                {
+                    sb5032.Append("<p>Действий: " + amount + "<p/>");
+                    F.CreaeI(sb5032);
+                    sb5032.Append(Beginning);
+                    sb5032.Append(Rect1.Print2());
+                    F.CloseI(sb5032);
                 }
             }
-            using (StreamWriter strw = new StreamWriter(result))
-            {
-                strw.WriteLine(sb5032);
-            }
-            System.Diagnostics.Process.Start(result);
+            F.Bot(sb5032);
         }
     }
 }
+
+

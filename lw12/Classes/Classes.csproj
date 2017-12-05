@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form\Form.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="task1379\Interval.cs" />
     <Compile Include="task1457\Comparator1457.cs" />

@@ -13,6 +13,7 @@ namespace task5108
         public int W { set; get; }
         public int H { set; get; }
         public String Id { set; get; }
+        public int Changes { set; get; }
 
         public Rectangle(int x, int y, int w, int h, String id)
         {
@@ -26,7 +27,7 @@ namespace task5108
         {
             if (X + x < 0)
             {
-                throw new ArgumentException("Значение х должно быть неотрицательно");
+                throw new ArgumentException("<p>Значение х должно быть неотрицательным<p/>");
             }
             X += x;
         }
@@ -34,23 +35,23 @@ namespace task5108
         {
             if (Y + y < 0)
             {
-                throw new ArgumentException("Значение y должно быть неотрицательно");
+                throw new ArgumentException("<p>Значение y должно быть неотрицательным<p/>");
             }
             Y += y;
         }
         public void StretchX(int w)
         {
-            if (W + w < 0)
+            if (W + w <= 0)
             {
-                throw new ArgumentException("Значение W должно быть неотрицательно");
+                throw new ArgumentException("<p>Значение W должно быть неотрицательным<p/>");
             }
             W += w;
         }
         public void StretchY(int h)
         {
-            if (H + h < 0)
+            if (H + h <= 0)
             {
-                throw new ArgumentException("Значение H должно быть неотрицательно");
+                throw new ArgumentException("<p>Значение H должно быть неотрицательным<p/>");
             }
             H += h;
         }
@@ -59,7 +60,7 @@ namespace task5108
             return "<rect x =\"" + X +
                     "\" y=\"" + Y +
                     "\" width=\"" + W +
-                    "\" height=\"" + H + "\" stroke=\"red\" stroke-width=\"1\" fill=\"none\"/>\n";
+                    "\" height=\"" + H + "\" stroke=\"black\" stroke-width=\"1\" fill=\"none\"/>\n";
         }
     }
 }

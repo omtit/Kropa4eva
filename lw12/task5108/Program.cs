@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Classes.Form;
 
 namespace task5108
 {
@@ -11,38 +12,40 @@ namespace task5108
     {
         static void Main(string[] args)
         {
+            StringBuilder sb = new StringBuilder();
+            Form F = new Form();
+            F.Top(sb);
             for (int i = 1; i < 15; i++)
             {
-
+                F.Mid1(sb, i);
                 String rel = "task5108\\test" + i + ".csv";
                 List<string> Changes = new List<string>();
                 List<Rectangle> R1 = new List<Rectangle>();
                 try
                 {
-                    Console.WriteLine(i+"\n");
                     using (StreamReader str = new StreamReader(rel))
-                    {                        
+                    {
                         while (!str.EndOfStream)
                         {
                             String s = str.ReadLine();
                             String[] s1 = s.Split(';');
                             if (s.Contains("create") && s1.Length == 6)
                             {
-                                bool Exists = false;
+                                int YN = 0;
                                 foreach (Rectangle r in R1)
                                 {
                                     if (s1[1] == r.Id)
                                     {
-                                        Exists = true;
-                                    }                                    
+                                        YN++;
+                                    }
                                 }
-                                if (!Exists)
+                                if (YN == 0)
                                 {
                                     R1.Add(new Rectangle(int.Parse(s1[2]), int.Parse(s1[3]), int.Parse(s1[4]), int.Parse(s1[5]), s1[1]));
                                 }
                                 else
                                 {
-                                    Console.WriteLine($"Фигура с таким id {s1[1]} уже существует");
+                                    sb.AppendFormat($"<p>Фигура с таким id {s1[1]} уже существует<p/>");
                                 }
                             }
                             else if ((s.Contains("shiftX") || s.Contains("shiftY") || s.Contains("stretchX") || s.Contains("stretchY")) && s1.Length == 3)
@@ -51,9 +54,9 @@ namespace task5108
                             }
                             else
                             {
-                                Console.WriteLine("Некорректный формат");
+                                sb.Append("<p>Некорректный формат<p/>");
                             }
-                        }          
+                        }
                         foreach (Rectangle e in R1)
                         {
                             foreach (String a in Changes)
@@ -64,40 +67,56 @@ namespace task5108
                                     if (a1[0] == "shiftX")
                                     {
                                         e.ShiftX(int.Parse(a1[2]));
+                                        e.Changes++;
                                     }
                                     if (a1[0] == "shiftY")
                                     {
                                         e.ShiftY(int.Parse(a1[2]));
+                                        e.Changes++;
                                     }
                                     if (a1[0] == "stretchX")
                                     {
                                         e.StretchX(int.Parse(a1[2]));
+                                        e.Changes++;
                                     }
                                     if (a1[0] == "stretchY")
                                     {
                                         e.StretchY(int.Parse(a1[2]));
+                                        e.Changes++;
                                     }
                                 }
                             }
                         }
-                    }                    
+                    }
                 }
-                catch(ArgumentException ex)
+                catch (ArgumentException ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    sb.Append(ex.Message);
                 }
                 catch (FileNotFoundException ex)
                 {
-                    Console.WriteLine($"Файл {Path.GetFullPath(rel)} не найден");
+                    sb.Append($"Файл {Path.GetFullPath(rel)} не найден");
+                    continue;
                 }
                 catch (FormatException ex)
                 {
-                    Console.WriteLine("Не удается считать число");
+                    sb.Append("<p>Не удается считать число<p/>");
                 }
-                foreach (Rectangle e in R1)
+                if (R1.Count != 0)
                 {
-                    Console.WriteLine(e.Print());
+                    foreach (Rectangle e in R1)
+                    {
+                        sb.AppendFormat($"<p>{e.Id} Действий: {e.Changes}<p/>\n");
+                    }
+                    F.CreaeI(sb);
+                    foreach (Rectangle e in R1)
+                    {
+                        sb.Append(e.Print());
+                    }
+                    F.CloseI(sb);
                 }
             }
-        }}
+            F.Bot(sb);
+        }
     }
+}

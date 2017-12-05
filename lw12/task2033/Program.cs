@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 using System.IO;
 using Classes.Form;
 
-namespace task5108v2
+namespace task2033
 {
     class Program
     {
         static void Main(string[] args)
         {
             StringBuilder sb = new StringBuilder();
-            Form Form = new Form();
-            Form.Top(sb);
-            for (int i = 1; i < 15; i++)
+            Form F1 = new Form();
+            F1.Top(sb);
+            for (int i = 1; i < 19; i++)
             {
-                Form.Mid1(sb, i);
-                String rel = "task5108\\test" + i + ".csv";
-                Dictionary<string, Rectangle> D1 = new Dictionary<string, Rectangle>();
+                F1.Mid1(sb, i);
+                String rel = "task2033\\test" + i + ".csv";
+                Dictionary<string, Shape> D1 = new Dictionary<string, Shape>();
                 try
                 {
                     using (StreamReader str = new StreamReader(rel))
@@ -28,23 +28,33 @@ namespace task5108v2
                         {
                             String s = str.ReadLine();
                             String[] s1 = s.Split(';');
-
-                            if (s.Contains("create") && s1.Length == 6)
+                            if (s.Contains("create") && (s1.Length == 7 || s1.Length == 6))
                             {
-                                if (!D1.ContainsKey(s1[1]))
+                                if (!D1.ContainsKey(s1[2]))
                                 {
-                                    D1.Add(s1[1], new Rectangle(int.Parse(s1[2]), int.Parse(s1[3]), int.Parse(s1[4]), int.Parse(s1[5]), s1[1]));
+                                    if (s1[1] == "rectangle" && s1.Length == 7)
+                                    {
+                                        D1.Add(s1[2], new Rectangle(int.Parse(s1[3]), int.Parse(s1[4]), int.Parse(s1[5]), int.Parse(s1[6]), s1[2]));
+                                    }
+                                    else if (s1[1] == "circle" && s1.Length == 6)
+                                    {
+                                        D1.Add(s1[2], new Circle(int.Parse(s1[3]), int.Parse(s1[4]), int.Parse(s1[5]), s1[2]));
+                                    }
+                                    else
+                                    {
+                                        sb.Append("<p>Некорректный формат<p/>");
+                                    }
                                 }
                                 else
-                                {                                    
-                                    sb.AppendFormat($"<p>Ошибка: Идентификатор не должен повторяться ({s1[1]})<p/>");
+                                {
+                                    sb.AppendFormat($"<p>Ошибка: Идентификатор не должен повторяться ({s1[2]})<p/>");
                                 }
                             }
                             else if ((s.Contains("shiftX") || s.Contains("shiftY") || s.Contains("stretchX") || s.Contains("stretchY")) && s1.Length == 3)
                             {
                                 if (D1.ContainsKey(s1[1]))
                                 {
-                                    Rectangle r1 = D1[s1[1]];
+                                    Shape r1 = D1[s1[1]];
 
                                     if (s1[0] == "shiftX")
                                     {
@@ -64,19 +74,19 @@ namespace task5108v2
                                     }
                                 }
                                 else
-                                {                                    
+                                {
                                     sb.AppendFormat($"<p>Ошибка: Операция над неопознанным объектом {s1[1]}<p/>");
                                 }
                             }
                             else
-                            {                               
+                            {
                                 sb.Append("<p>Некорректный формат<p/>");
                             }
                         }
                     }
                 }
                 catch (ArgumentException ex)
-                {                   
+                {
                     sb.Append(ex.Message);
                 }
                 catch (FileNotFoundException ex)
@@ -92,17 +102,18 @@ namespace task5108v2
                 {
                     foreach (var e in D1.Keys)
                     {
-                        sb.AppendFormat($"<p>{D1[e].Id} Действий: {D1[e].Changes} <p/>");
+                        sb.AppendFormat($"<p>{D1[e].Id} Действий: {D1[e].Changes} {D1[e].ShowC()}<p/>");
                     }
-                    Form.CreaeI(sb);
+                    F1.CreaeI(sb);
                     foreach (var e in D1.Keys)
                     {
                         sb.Append(D1[e].Print());
                     }
-                    Form.CloseI(sb);
+                    F1.CloseI(sb);
                 }
             }
-            Form.Bot(sb);
+            F1.Bot(sb);
         }
     }
 }
+

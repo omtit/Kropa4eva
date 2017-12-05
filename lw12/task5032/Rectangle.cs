@@ -24,23 +24,33 @@ namespace task5032
         {
             if (X + x < 0)
             {
-                //err = "\nОшибка: Координата X должна быть неотрицательной\nПоследнее корректное состояние:";
-                //break;
+                throw new ArgumentException("<p>\nОшибка: Координата X должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
             }
             X += x;
-
         }
-            public int ShiftY(int y)
+        public void ShiftY(int y)
         {
-            return Y + y;
+            if (Y + y < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Координата Y должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
+            }
+            Y += y;
         }
-        public int StretchX(int w)
+        public void StretchX(int w)
         {
-            return W + w;
+            if (W + w <= 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Ширина должна быть положительной\nПоследнее корректное состояние:<p/>");
+            }
+            W += w;
         }
-        public int StretchY(int h)
+        public void StretchY(int h)
         {
-            return H + h;
+            if (H + h <= 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Высота должна быть положительной\nПоследнее корректное состояние:<p/>");
+            }
+            H += h;
         }
         public String Print1()
         {

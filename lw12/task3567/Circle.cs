@@ -14,31 +14,55 @@ namespace task3567
 
         public Circle(int x, int y, int r)
         {
-            this.X = x;
-            this.Y = y;
-            this.R = r;
+            X = x;
+            Y = y;
+            R = r;
         }
-        public int ShiftX(int x)
+        public void ShiftX(int x)
         {
-            return X + x;
+            if (X + x < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Координата X должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
+            }
+            if (X + x - R < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Левая точка окружности должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
+            }
+                X += x;
         }
-        public int ShiftY(int y)
+        public void ShiftY(int y)
         {
-            return Y + y;
+            if (Y + y < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Координата Y должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
+            }
+            if (Y + y - R < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Верхняя точка окружности должна быть неотрицательной\nПоследнее корректное состояние:<p/>");
+            }
+            Y += y;
         }
-
         public void StretchX(int x)
         {
-            Y += x / 2;
-            X += x / 2;
+            if (R + x / 2 < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Ширина должна быть положительной.\nПоследнее корректное состояние:<p/>");
+            }
             R += x / 2;
+            X += x / 2;
+            Y += x / 2;
         }
         public void StretchY(int x)
         {
+            if (R + x / 2 < 0)
+            {
+                throw new ArgumentException("<p>\nОшибка: Высота должна быть положительной.\nПоследнее корректное состояние:<p/>");
+            }
+            R += x / 2;
             X += x / 2;
             Y += x / 2;
-            R += x / 2;
         }
+
         public String Print1()
         {
             return "<circle cx =\"" + X +
